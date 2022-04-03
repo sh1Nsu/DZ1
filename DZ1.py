@@ -1,35 +1,34 @@
-bogdan = "hello"
-myage = 18
-print("Hello, I am ", myage, "years old")
-name = "bogdan"
-print(name + name + name + name + name, name*5)
+my_age = 18
+print(f"Hello, I am {my_age} years old")
+name = "Bogdan"
+print(f'{5*(name)}')
 while True:
-    username = input("what's ur name? ")
-    if username.isdigit():
+    user_name = input("what's ur name? ")
+    if user_name.isdigit():
         print("Write ur name correct!")
     else:
         break
 while True:
-    userage = int(input("what's ur age? "))
-    if userage > 150 or userage < 0:
-        print("Error!")
-        userage = int(input())
+    user_age = int(input("what's ur age? "))
+    if user_age > 150 or user_age < 0:
+        print("Error! You are using invalid symbols")
+        user_age = int(input())
     else:
         break
-print("Hello,", username, "!")
-print("U r", userage, "years old")
-print(username[1:-1], username[::-1], username[-3:], username[0:5])
-print(len(username))
-s = 0
-p = 1
-while (userage > 0):
-    s += userage%10
-    p *= userage%10
-    userage //= 10
-print("The sum of numbers in ur age =", s)
-print("The comp =", p )
-username2 = username.capitalize()
-print(username.upper(), username.lower(), username.capitalize(), username2.swapcase())
+print(f"Hello, {user_name}!")
+print(f"U r {user_age} years old")
+print(user_name[1:-1], user_name[::-1], user_name[-3:], user_name[0:5])
+print(len(user_name))
+summ = 0
+composition = 1
+while user_age > 0:
+    summ += user_age % 10
+    composition *= user_age % 10
+    user_age //= 10
+print(f"The sum of numbers in ur age = {summ}")
+print(f"The comp = {composition}")
+user_name2 = user_name.capitalize()
+print(user_name.upper(), user_name.lower(), user_name.capitalize(), user_name2.swapcase())
 print("what 2+2*2 is?")
 while True:
     answer = int(input())
